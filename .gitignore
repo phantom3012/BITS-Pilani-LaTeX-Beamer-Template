@@ -1,0 +1,14 @@
+*.toc
+*.synctex.gz
+*.snm
+*.out
+*.nav
+*.log
+*.fls
+*.fdb_latexmk
+*.aux
+*.xml
+*.bcf
+*.blg
+*.synctex
+*.synctex(busy)

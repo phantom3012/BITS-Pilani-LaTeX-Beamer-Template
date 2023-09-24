@@ -3,8 +3,8 @@
 \mode<presentation> {
 \usetheme{bits}
 %\setbeamertemplate{Fluid Mechanics} % To remove the footer line in all slides uncomment this line
-%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
-%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+% \setbeamertemplate{footline}{} % To replace the footer line in all slides with a simple slide count uncomment this line
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
@@ -26,6 +26,11 @@
 \renewcommand{\thesubfigure}{}
 \newcommand{\lmath}[1]{$\mathrm{#1}$}
 \newcommand{\lbmath}[1]{$\mathbf{#1}$}
+
+\usepackage{csquotes}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{ref.bib}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
 
 \newenvironment{descrsf}[1]
   {\begin{list}{}{\renewcommand{\makelabel}[1]{\textsf{##1}\hfil}
@@ -53,47 +58,102 @@
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
-
-\title[Incompressible flow]{Incompressible flow in pipes and channels} % The short title appears at the bottom of every slide, the full title is only on the title page
-\author{Eldhose Iype} % Your name
-\institute[BITS Pilani, Pilani Campus]{} % Your institution as it will appear on the bottom of every slide, may be 
-\date{\today} % Date, can be changed to a custom date
+\usefonttheme{serif}
+\title[Firmware verification for wBMS]{\small{Firmware verification for Automotive Wireless Battery Monitoring Systems \\[1ex]}} % The short title appears at the bottom of every slide, the full title is only on the title page
+\author[Sai Kartik]{\begin{tabular}{r@{ }l} 
+  Author:       & Sai Kartik \\
+  Manager:  & Mr. Abhinandan Subbarao\\
+  Professor:    & Dr. Sathisha Shet K \end{tabular}} % Your name
+\institute[BPPC]{BITS Pilani, Pilani Campus} % Your institution as it will appear on the bottom of every slide, may be 
+ \date{September 23,2023} % Date, can be changed to a custom date
 
 \begin{document}
+\setbeamertemplate{footline}{}
 \begin{frame}
-\titlepage
+  \titlepage
 \end{frame}
 
+\setbeamertemplate{footline}[infolines theme]
 
-\setbeamercovered{transparent=0}
 \begin{frame}
-\frametitle{\bitstitle{Shear-stress distribution}}
-\begin{center}
-\includegraphics[scale=0.3]{figures/flow_pipe.png}
-\end{center}\pause
-Applying momentum balance for the disc shaped fluid element
-\begin{align*}
-\frac{dp}{dL}+\frac{2\tau}{r} = 0
-\end{align*}\pause
-In steady flow, either laminar or turbulent, the pressure at any given cross section of a stream tube is constant, so that $dp/dL$ is independent of $r$. \pause
-At the wall, the above equation becomes
-\begin{align}
-\frac{dp}{dL}+\frac{2\tau_w}{r_w} = 0
-\end{align}\pause
+  \frametitle{\bitstitle{Aim}}
+  The objective of this project is to validate the firmware on the battery monitor sensors in order to ensure its compliance with established functional safety criteria for a wireless battery monitoring system used in an automotive environment.
 \end{frame}
-\setbeamercovered{invisible}
 
-\setbeamercovered{transparent=0}
 \begin{frame}
-\frametitle{\bitstitle{Shear-stress distribution}}
-Combining both equations, we get
-\begin{align*}
-\frac{\tau}{r}  = \frac{\tau_w}{r_w} 
-\end{align*}\pause
-\begin{center}
-\includegraphics[scale=0.5]{figures/shear_stress_pipe.png}
-\end{center}
+  \frametitle{\bitstitle{Introduction}}
+  \begin{itemize}
+    \item Growing need for modern cockpit electronics: Result of the industry's shift toward electric mobility
+    \item Also a growing need for highly safe systems to monitor various components of the automotive in concern
+    \item The battery is the most important component in any electric vehicle and requires constant monitoring. Especially considering most of the vehicles have packs with Li-ion substrates. The damage can be catastrophic if not monitored closely and properly \pause
+    \item ADI provides various wBMS solutions that can help address concerns regarding the same
+  \end{itemize}
 \end{frame}
-\setbeamercovered{invisible}
 
-\end{document} 
+\begin{frame}
+  \frametitle{\bitstitle{Product Walkthrough}}
+  \begin{itemize}
+    \item Hardware setup
+          \begin{itemize}
+            \item Sensors
+            \item Monitors
+            \item Connected wirelessly through specific connection protocols
+            \item Specialised library designed to work with client microcontollers to collect data
+            \item Various safety guidelines agreed upon by all parties involved. These will be implemented on all the hardware components involved
+          \end{itemize}
+    \item Software setup
+          \begin{itemize}
+            \item Relevant firmware that runs on each controller present
+            \item Using the software that runs on the sensors, various functional safety capabilities can be tested
+                  \begin{itemize}
+                    \item Either inject erroneous instructions into the sensor, or corrupt the sensor output
+                    \item Compare this to a set baseline to evaluate the performance
+                  \end{itemize}
+            \item Various frameworks that utilise this concept have been developed and tested in the field
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\bitstitle{Testing Methodologies}}
+  \begin{itemize}
+    \item Original testing procedure was implemented using python scripts with a combination of scripting techniques and OOP concepts
+          \begin{itemize}
+            \item Problems: Difficult to maintain, non-flexible framework
+          \end{itemize}
+    \item Solution: Newer test frameworks being developed are utilising OOP concepts to aid in easy maintenance of the codebase and retain flexibility of requirement-based changes
+    \item Use APIs exposed by ADI's internal software to directly communicate with the system to evaluate/baseline performance. Also helps in keeping the codebase modular
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\bitstitle{Work Progress}}
+  \begin{itemize}
+    \item Completed understanding of various hardware and software components of the system
+    \item Analysed various faults with the previous testing methodologies and how they can be improved
+    \item Basic implementation of the newer framework using OOP concepts has been implemented. With minor modifications, the test framework will be easy to use for all possible test cases
+    \item Modularised code to a large extent
+    \item (Timelines for specific events updated in the diary)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\bitstitle{Future Work}}
+  \begin{itemize}
+    \item Complete implementation of said OOP framework
+    \item Work on automation of testing the various cases possible \cite{jenkins}
+    \item Extend the framework to work with various sensor families
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\bitstitle{Product Innovation}}
+  A major innovative aspect of this project is to purpose various freely available tools (like python/pytest) \cite{pythondocs,pytest} to generate automatic reports on testing various firmware which is very specific to a certain use case
+\end{frame}
+
+\begin{frame}
+  \frametitle{\bitstitle{References\footnote[frame]{Other documents regarding specific hardware/software architecture are for internal use only and cannot be shared as open sources/references}}}
+  \printbibliography
+\end{frame}
+
+\end{document}
