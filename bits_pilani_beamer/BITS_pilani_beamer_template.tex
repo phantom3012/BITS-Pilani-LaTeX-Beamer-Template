@@ -67,7 +67,7 @@
   PS Station: & Analog Devices, India
 \end{tabular}} % Your name
 \institute[BPPC]{BITS Pilani, Pilani Campus} % Your institution as it will appear on the bottom of every slide, may be 
- \date{September 23,2023} % Date, can be changed to a custom date
+ \date{December 15,2023} % Date, can be changed to a custom date
 
 \begin{document}
 \setbeamertemplate{footline}{}
@@ -75,88 +75,92 @@
   \titlepage
 \end{frame}
 
+\begin{frame}
+  \frametitle{\bitstitle{Outline}}
+  \tableofcontents
+\end{frame}
+
 \setbeamertemplate{footline}[infolines theme]
 
+\section{Aim and Problem statement}
 \begin{frame}
-  \frametitle{\bitstitle{Aim}}
-  The objective of this project is to validate the firmware on the battery monitor sensors in order to ensure its compliance with established functional safety criteria for a wireless battery monitoring system used in an automotive environment.
+  \frametitle{\bitstitle{Aim and Problem statement}}
+  \textbf{Aim} \\ This project aims to verify the firmware of battery monitor sensors for a car's wireless battery monitoring system (wBMS).
+  \vfill
+  \textbf{Problem statement} \\ Use automation concepts to test the software and deliver it to customers quickly and efficiently without bugs.
 \end{frame}
 
+\section{Main Objectives}
 \begin{frame}
-  \frametitle{\bitstitle{Introduction}}
+  \frametitle{\bitstitle{Main Objectives}}
   \begin{itemize}
-    \item Growing need for modern cockpit electronics: Result of the industry's shift toward electric mobility
-    \item Also a growing need for highly safe systems to monitor various components of the automotive in concern
-    \item The battery is the most important component in any electric vehicle and requires constant monitoring. Especially considering most of the vehicles have packs with Li-ion substrates. The damage can be catastrophic if not monitored closely and properly \pause
-    \item ADI provides various wBMS solutions that can help address concerns regarding the same
+    \item To identify the testcases to be executed on wBMS system
+    \item To write scripts to perform manual testing of all tests
+    \item To automate the running of the test suite and generation of test report
   \end{itemize}
+
 \end{frame}
 
+\section{Design Methodologies}
 \begin{frame}
-  \frametitle{\bitstitle{Product Walkthrough}}
+  \frametitle{\bitstitle{Design Methodologies}}
   \begin{itemize}
-    \item Hardware setup
-          \begin{itemize}
-            \item Sensors
-            \item Monitors
-            \item Connected wirelessly through specific connection protocols
-            \item Specialised library designed to work with client microcontollers to collect data
-            \item Various safety guidelines agreed upon by all parties involved. These will be implemented on all the hardware components involved
-          \end{itemize}
-    \item Software setup
-          \begin{itemize}
-            \item Relevant firmware that runs on each controller present
-            \item Using the software that runs on the sensors, various functional safety capabilities can be tested
-                  \begin{itemize}
-                    \item Either inject erroneous instructions into the sensor, or corrupt the sensor output
-                    \item Compare this to a set baseline to evaluate the performance
-                  \end{itemize}
-            \item Various frameworks that utilise this concept have been developed and tested in the field
-          \end{itemize}
+    \item To perform manual testing, we flash the firmware onto the respective devices with JLink lite debuggers % insert ref 40
+    \item Download files to the gateway and the nodes to faciliate communication between them % insert ref 22
+    \item Configure the front-end application (GUI) to control the network and test the functionality.
+    \item Ensure the setup is RF shielded fairly well
   \end{itemize}
+
 \end{frame}
 
+\section{Implementation}
+
+\subsection{High level implementation}
 \begin{frame}
-  \frametitle{\bitstitle{Testing Methodologies}}
+  \frametitle{\bitstitle{High level implementation}}
+  The software test cycle (STLC) mainly consists of 4 major steps to go through:
   \begin{itemize}
-    \item Original testing procedure was implemented using python scripts with a combination of scripting techniques and OOP concepts
-          \begin{itemize}
-            \item Problems: Difficult to maintain, non-flexible framework
-          \end{itemize}
-    \item Solution: Newer test frameworks being developed are utilising OOP concepts to aid in easy maintenance of the codebase and retain flexibility of requirement-based changes
-    \item Use APIs exposed by ADI's internal software to directly communicate with the system to evaluate/baseline performance. Also helps in keeping the codebase modular
+    \item Test planning \pause
+    \item Test case development \pause
+    \item Test environment setup \pause
+    \item Test execution \pause
   \end{itemize}
+
 \end{frame}
 
+\subsubsection{Test Planning}
 \begin{frame}
-  \frametitle{\bitstitle{Work Progress}}
+  \frametitle{\bitstitle{Test Planning}}
   \begin{itemize}
-    \item Completed understanding of various hardware and software components of the system
-    \item Analysed various faults with the previous testing methodologies and how they can be improved
-    \item Basic implementation of the newer framework using OOP concepts has been implemented. With minor modifications, the test framework will be easy to use for all possible test cases
-    \item Modularised code to a large extent
-    \item (Timelines for specific events updated in the diary)
+    \item This step is the most significant part of software testing where the required testing strategies are created. \pause
+    \item It is typically the team lead's/manager's role to establish the project cost and efforts required. \pause % insert ref 32 
+    \item This phase begins once the requirement collection phase has been completed.
+    \item The major outcome of this phase is the finalised test plan/strategy which has to be adhered to. \pause
   \end{itemize}
+
 \end{frame}
 
+\subsubsection{Test Case Development}
 \begin{frame}
-  \frametitle{\bitstitle{Future Work}}
+  \frametitle{\bitstitle{Test Case Development}}
   \begin{itemize}
-    \item Complete implementation of said OOP framework
-    \item Work on automation of testing the various cases possible \cite{jenkins}
-    \item Extend the framework to work with various sensor families
+    \item Once a strategy of the tests to be performed is outlined, the required data for it is gathered. \pause
+    \item This data is organised to fit various test cases to ensure coverage of all possible scenarios. \pause
+    \item Once the design of individual test cases is complete, each test case is linked in a chain in the Responsibility Traceability Matrix. \pause %insert ref 33
   \end{itemize}
+
 \end{frame}
 
+
 \begin{frame}
-  \frametitle{\bitstitle{Product Innovation}}
-  A major innovative aspect of this project is to purpose various freely available tools (like python/pytest) \cite{pythondocs,pytest} to generate automatic reports on testing various firmware which is very specific to a certain use case
+  \frametitle{\bitstitle{Conclusion}}
+
 \end{frame}
 
 \setbeamertemplate{footline}{}
 \begin{frame}
   \frametitle{\bitstitle{References\footnote[frame]{Other documents regarding specific hardware/software architecture are for internal use only and cannot be shared as open sources/references}}}
-  \printbibliography
+  % \printbibliography
 \end{frame}
 
 \end{document}
