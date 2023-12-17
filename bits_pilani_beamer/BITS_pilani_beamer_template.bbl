@@ -19,6 +19,26 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ref40}{misc}{}
+      \field{sortinit}{}
+      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
+      \verb{urlraw}
+      \verb https: // www. segger .com /products /debug- probes /j - link/models/j-link-lite/overview/.
+      \endverb
+      \verb{url}
+      \verb https:%20//%20www.%20segger%20.com%20/products%20/debug-%20probes%20/j%20-%20link/models/j-link-lite/overview/.
+      \endverb
+    \endentry
+    \entry{ref22}{misc}{}
+      \field{sortinit}{}
+      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
+      \verb{urlraw}
+      \verb https://jusst.org/wp-content/uploads/2021/06/Validation-of-Wireless-Battery-Management-System-wBMS-Gen2.pdf
+      \endverb
+      \verb{url}
+      \verb https://jusst.org/wp-content/uploads/2021/06/Validation-of-Wireless-Battery-Management-System-wBMS-Gen2.pdf
+      \endverb
+    \endentry
     \entry{jenkins}{misc}{}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
@@ -29,6 +49,53 @@
       \endverb
       \verb{url}
       \verb https://www.jenkins.io/
+      \endverb
+    \endentry
+    \entry{ref32}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=5cb0a28810b57330e92e2c9fbeadd475}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Minkyu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=34ff91f09b7f55039a3c310fca134d58}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Jaesik},
+           giveni={J\bibinitperiod}}}%
+        {{hash=af3c2e2fc16a7cc708457c9da5ad1934}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Inseop},
+           giveni={I\bibinitperiod}}}%
+        {{hash=25eee0f8081a2748cb6495b7a92ffd3f}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Joonghui},
+           giveni={J\bibinitperiod}}}%
+        {{hash=17e5f48ec2ddab4783834c773052ab01}{%
+           family={Chon},
+           familyi={C\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{257fe074b143b4f3b8fc0150cb4278a4}
+      \strng{fullhash}{c2f79dca9bc2ef0a3f77134c98e6281a}
+      \strng{bibnamehash}{257fe074b143b4f3b8fc0150cb4278a4}
+      \strng{authorbibnamehash}{257fe074b143b4f3b8fc0150cb4278a4}
+      \strng{authornamehash}{257fe074b143b4f3b8fc0150cb4278a4}
+      \strng{authorfullhash}{c2f79dca9bc2ef0a3f77134c98e6281a}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 World Electric Vehicle Symposium and Exhibition (EVS27)}
+      \field{title}{Wireless battery management system}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/EVS.2013.6914889
       \endverb
     \endentry
     \entry{pythondocs}{misc}{}
@@ -53,6 +120,100 @@
       \endverb
       \verb{url}
       \verb https://docs.pytest.org/en/7.1.x/contents.html
+      \endverb
+    \endentry
+    \entry{ref34}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=b4f38c70c3cf3b9497f1158663717965}{%
+           family={Shuaishuai},
+           familyi={S\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dc920e301a8deb49531fb70a01348073}{%
+           family={Zhengwei},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=14f20e6eddefc77c08cfcf5a2468507c}{%
+           family={Bin},
+           familyi={B\bibinitperiod},
+           given={Liu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f297f38e1b3758c6b3bde87beb8fda9b}{%
+           family={Yunfeng},
+           familyi={Y\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ad93718d3cd3721d357512983f41f5ca}{%
+           family={Zhijie},
+           familyi={Z\bibinitperiod},
+           given={Gao},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf4d5c9d93a1d962e19cdc867551e561}
+      \strng{fullhash}{4cba2d2d3d1a0de90769fb0fa02c3077}
+      \strng{bibnamehash}{bf4d5c9d93a1d962e19cdc867551e561}
+      \strng{authorbibnamehash}{bf4d5c9d93a1d962e19cdc867551e561}
+      \strng{authornamehash}{bf4d5c9d93a1d962e19cdc867551e561}
+      \strng{authorfullhash}{4cba2d2d3d1a0de90769fb0fa02c3077}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 12th International Conference on Computer Science and Education (ICCSE)}
+      \field{title}{An automatic testing framework for embedded software}
+      \field{year}{2017}
+      \field{pages}{269\bibrangedash 274}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICCSE.2017.8085501
+      \endverb
+    \endentry
+    \entry{ref33}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=a3f94462dfa72557cc934d7e6b213092}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=fb4e4db25c333bc2a9b86a41d5a5418d}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yikun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=29ce1262bdf43415f5e6bf31b85b9e6c}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dc50b3a0368a08cb21133bcf1905cf26}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Ning},
+           giveni={N\bibinitperiod}}}%
+        {{hash=c89fb64b03d3a5d0f2e6daa3349b2634}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yuanming},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{380a388edf8b9d7f40caa44db4ea8321}
+      \strng{fullhash}{23abffd77d037c6fab1193f55e40a1ca}
+      \strng{bibnamehash}{380a388edf8b9d7f40caa44db4ea8321}
+      \strng{authorbibnamehash}{380a388edf8b9d7f40caa44db4ea8321}
+      \strng{authornamehash}{380a388edf8b9d7f40caa44db4ea8321}
+      \strng{authorfullhash}{23abffd77d037c6fab1193f55e40a1ca}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE 23rd International Conference on Parallel and Distributed Systems (ICPADS)}
+      \field{title}{Vulnerability Detection in IoT Firmware: A Survey}
+      \field{year}{2017}
+      \field{pages}{769\bibrangedash 772}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICPADS.2017.00104
       \endverb
     \endentry
   \enddatalist
