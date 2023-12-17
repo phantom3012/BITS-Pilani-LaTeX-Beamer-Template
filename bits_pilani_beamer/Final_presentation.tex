@@ -66,8 +66,8 @@
   Professor:    & Dr. Sathisha Shet K \\
   PS Station: & Analog Devices, India
 \end{tabular}} % Your name
-\institute[BPPC]{BITS Pilani, Pilani Campus} % Your institution as it will appear on the bottom of every slide, may be 
- \date{December 15,2023} % Date, can be changed to a custom date
+\institute[BPPC]{BITS Pilani, Pilani Campus} % Your institution as it will appear at the bottom of every slide
+ \date{December 15, 2023} % Date, can be changed to a custom date
 
 \begin{document}
 \setbeamertemplate{footline}{}
@@ -94,7 +94,7 @@
 \begin{frame}
   \frametitle{\bitstitle{Main Objectives}}
   \begin{itemize}
-    \item To identify the testcases to be executed on wBMS system \pause
+    \item To identify the test cases to be executed on wBMS system \pause
     \item To write scripts to perform manual testing of all tests \pause
     \item To automate the running of the test suite and generation of test report
   \end{itemize}
@@ -144,7 +144,7 @@
 \begin{frame}
   \frametitle{\bitstitle{Test Case Development}}
   \begin{itemize}
-    \item Once a strategy of the tests to be performed is outlined, the required data for it is gathered. \pause
+    \item Once a strategy for the tests to be performed is outlined, the required data for it is gathered. \pause
     \item This data is organised to fit various test cases to ensure coverage of all possible scenarios. \pause
     \item Once the design of individual test cases is complete, each test case is linked in a chain in the Responsibility Traceability Matrix. \cite{ref33}
   \end{itemize}
@@ -155,7 +155,7 @@
 \begin{frame}
   \frametitle{\bitstitle{Test Environment Setup}}
   \begin{itemize}
-    \item This is a standalone task that is undertaken by the development team or the client to determine the environment the software is evaluated in. \pause
+    \item This is a standalone task that is undertaken by the development team or the client to determine the environment the software is evaluated. \pause
     \item The testing team should also come up with certain unit test cases to ensure the environment is ready.
   \end{itemize}
 
@@ -168,7 +168,7 @@
     \item In this phase, the testing team begins executing the test cases based on the strategy and environment decided. \pause
     \item If certain tests fail, the particular defect can be reported to the development team using a bug tracking system \pause
     \item Every failed test case should ideally be linked to at least one problem. This linking can help identify issues with the software \pause \cite{ref34}
-    \item If a test case is blocked by a design flaw, they can be marked as such \pause
+    \item If a test case is blocked by a design flaw, it can be marked as such \pause
     \item A report consisting of all failed and blocked test cases can then be prepared and provided to the development team for them to take further action.
   \end{itemize}
 
@@ -180,10 +180,10 @@
   \frametitle{\bitstitle{Low Level Implementation}}
   \begin{itemize}
     \item In order to exhaustively cover the testing of the software, there will be hundreds of test cases. \pause
-    \item Maunally testing each case by using GUI elements is completely infeasible as it will consume a lot of time and human resources. \pause
+    \item Manually testing each case by using GUI elements is completely infeasible as it will consume a lot of time and human resources. \pause
     \item In order to overcome this issue, frameworks are built to test the software using various exposed API calls to the software. \pause
     \item As a major objective of this project, the frameworks are designed to be easily automated. \pause
-    \item To allow everyone to access the test cases and modify them as necessary, open source software alternatives like pytest and python have been considered. \cite{pythondocs, pytest}%inser python, pytest refs
+    \item To allow everyone to access the test cases and modify them as necessary, open-source software alternatives like pytest and python have been considered. \cite{pythondocs, pytest}%inser python, pytest refs
   \end{itemize}
 
 \end{frame}
@@ -193,7 +193,7 @@
 \begin{frame}
   \frametitle{\bitstitle{Hardware Setup}}
   As discussed earlier, the gateways and nodes of the network are flashed with the software provided by the development team. \\
-  The development boards housing the neessary components are equipped with the required hardware pins to allow quick flashing through internal applications developed by ADI. \\
+  The development boards housing the necessary components are equipped with the required hardware pins to allow quick flashing through internal applications developed by ADI. \\
 
   \begin{figure}
     \centering
@@ -209,15 +209,15 @@
 
 \begin{frame}
   \frametitle{\bitstitle{Software setup: Pytest framework}}
-  Once the hardware is completely setup and the network is formed, the configuration for the devices in the network are uploaded to them through a GUI tool. This will ensure the reliance of the messages transmitted in the network. \\
-  In order to allow automation, this tool can be designed to expose certain API endpoints which can be used by python scripts to communicate and carry tasks at a much faster pace compared to manual interaction with the GUI tool. \\
+  Once the hardware is completely set up and the network is formed, the configuration for the devices in the network is uploaded to them through a GUI tool. This will ensure the reliance of the messages transmitted in the network. \\
+  In order to allow automation, this tool can be designed to expose certain API endpoints which can be used by Python scripts to communicate and carry tasks at a much faster pace compared to manual interaction with the GUI tool. \\
 
 \end{frame}
 
 \begin{frame}[allowframebreaks]
   \frametitle{\bitstitle{Software setup: Pytest framework}}
   To fast-track the process further in terms of validation and testing, we can use the pytest library along with certain packages that allow communication with the wireless network. \\
-  Since this is a very popular framework, there are a lot of tools engineered to make our lives easy. This framework integrates easily with development applications such as VSCode and provides a clean user interface to the tests. \\
+  Since this is a very popular framework, there are a lot of tools engineered to make our lives easy. This framework integrates easily with development applications such as VSCode and provides a clean user interface for the tests. \\
 
   \begin{figure}
     \centering
@@ -228,7 +228,7 @@
     \includegraphics[scale=0.4]{figures/tested.png}
   \end{figure}
 
-  The user can decide to run specific tests to test various functionalites of the system as and when needed. \\
+  The user can decide to run specific tests to test various functionalities of the system as and when needed. \\
   If we want to automate a larger batch of tests, we can use the command line options that pytest provides. This tool combined with a CI-CD tool like Jenkins to set triggers for various times to test \cite{jenkins}
 \end{frame}
 
